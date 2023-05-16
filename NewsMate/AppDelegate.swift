@@ -14,6 +14,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//            UINavigationBar.appearance().barTintColor = .yellow
+//            UINavigationBar.appearance().backgroundColor = UIColor(displayP3Red: 47/225, green: 54/225, blue: 64/225, alpha: 1.0)
+//            UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+//            UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        
+            let appearance = UINavigationBarAppearance()
+            appearance.backgroundColor = UIColor(displayP3Red: 47/225, green: 54/225, blue: 64/225, alpha: 1.0)
+            appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            
+
+            UINavigationBar.appearance().standardAppearance = appearance // for scrolling bg color
+            UINavigationBar.appearance().compactAppearance = appearance // not sure why it's here, but u can remove it and still works
+            UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        
+        
         return true
     }
 
